@@ -5,7 +5,7 @@ const app = express();
 
 //!Azure functions
 const account = "dhinesh";
-const accountKey = process.env.KEY;
+const accountKey = "process.env.KEY";
 
 const sharedKeyCredential = new StorageSharedKeyCredential(account, accountKey);
 const blobServiceClient = new BlobServiceClient(
@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/upload", (req, res) => {
-    createContainer(req.body);
+    createContainer(req.body.form.uri);
 })
 
 app.listen(process.env.PORT || 3000,()=>{
