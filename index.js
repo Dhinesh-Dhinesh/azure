@@ -15,7 +15,7 @@ var upload = multer({
 
 app.get('/',(req,res) => {
   res.send("<h1>Hello</h1>")
-}
+})
 
 app.post('/aa', upload.any(), function (req, res, next) {
   console.log(req.files)
