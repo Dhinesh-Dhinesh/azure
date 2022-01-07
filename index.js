@@ -19,8 +19,8 @@ app.get('/',(req,res) => {
 
 app.post('/aa', upload.any(), function (req, res, next) {
   console.log(req.files)
-  res.send('ok')
-  res.status(200).send('Uploaded: ' + req.files)
+//   res.send('ok')
+//   res.status(200).send('Uploaded: ' + req.files)
 })
 
 app.listen( process.env.PORT || 3000,()=>{
