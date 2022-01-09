@@ -1,7 +1,7 @@
 const express = require('express')
 const multer = require('multer')
 const multerAzure = require('multer-azure')
-require('dotenv').config()
+// require('dotenv').config()
 
 const app = express()
 
